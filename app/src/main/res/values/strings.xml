@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">斗地主</string>
+    <string name="coveredCard">底牌</string>
+    <string name="system_user1">系统玩家一</string>
+    <string name="system_user2">系统玩家2</string>
+    <string name="operationTip">系统玩家操作提示</string>
+    <string name="initialNum">17</string>
+
+    <integer name="showButton">0</integer>
+    <integer name="hideButton">1</integer>
+    <integer name="updateUserCardLayout">2</integer>
+    <integer name="updateDeskLayout">3</integer>
+
+    <integer name="grabLandlord">4</integer>
+    <integer name="notGrabLandlord">5</integer>
+    <integer name="commitCard">6</integer>
+    <integer name="notCommitCard">7</integer>
+
+    <integer name="toastWin">8</integer>
+
+    <integer name="save">10</integer>
+    <integer name="restore">11</integer>
+
+    <integer name="coverLandlordCard">12</integer>
+</resources>

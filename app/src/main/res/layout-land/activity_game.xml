@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:divider="@drawable/line_horizontal"
+    android:orientation="vertical"
+    android:showDividers="middle">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <Button
+            android:id="@+id/game_button_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/game_button_back" />
+
+        <ImageView
+            android:id="@+id/game_view_covered_card2"
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/coveredCard"
+            android:src="@drawable/game_card_covered" />
+
+        <ImageView
+            android:id="@+id/game_view_covered_card1"
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:layout_toLeftOf="@id/game_view_covered_card2"
+            android:layout_toStartOf="@id/game_view_covered_card2"
+            android:contentDescription="@string/coveredCard"
+            android:src="@drawable/game_card_covered" />
+
+        <ImageView
+            android:id="@+id/game_view_covered_card3"
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:layout_toEndOf="@id/game_view_covered_card2"
+            android:layout_toRightOf="@id/game_view_covered_card2"
+            android:contentDescription="@string/coveredCard"
+            android:src="@drawable/game_card_covered" />
+
+        <Button
+            android:id="@+id/game_button_past"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/game_button_past" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/game_system1_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_above="@+id/game_user_deskLayout"
+            android:contentDescription="@string/system_user1"
+            android:src="@drawable/user" />
+
+        <ImageView
+            android:id="@+id/game_system2_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_above="@+id/game_user_deskLayout"
+            android:contentDescription="@string/system_user2"
+            android:src="@drawable/user" />
+
+        <ImageView
+            android:id="@+id/game_system1_tip"
+            android:layout_width="80dp"
+            android:layout_height="90dp"
+            android:layout_above="@+id/game_system1_num"
+            android:layout_toEndOf="@id/game_system1_image"
+            android:layout_toRightOf="@+id/game_system1_image"
+            android:contentDescription="@string/operationTip" />
+
+        <ImageView
+            android:id="@+id/game_system2_tip"
+            android:layout_width="80dp"
+            android:layout_height="90dp"
+            android:layout_above="@+id/game_system2_num"
+            android:layout_toLeftOf="@+id/game_system2_image"
+            android:layout_toStartOf="@id/game_system2_image"
+            android:contentDescription="@string/operationTip" />
+
+        <TextView
+            android:id="@+id/game_system1_num"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/game_system1_image"
+            android:gravity="center"
+            android:text="@string/initialNum"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/game_system2_num"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/game_system2_image"
+            android:gravity="center"
+            android:text="@string/initialNum"
+            android:textSize="25sp" />
+
+        <LinearLayout
+            android:id="@+id/game_system1_deskLayout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_toEndOf="@+id/game_system1_tip"
+            android:layout_toRightOf="@+id/game_system1_tip"
+            android:layout_above="@+id/game_user_deskLayout"
+            android:gravity="start"
+            android:orientation="horizontal" />
+
+        <LinearLayout
+            android:id="@+id/game_system2_deskLayout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_above="@+id/game_user_deskLayout"
+            android:layout_toLeftOf="@id/game_system2_tip"
+            android:layout_toStartOf="@id/game_system2_tip"
+            android:gravity="end"
+            android:orientation="horizontal" />
+
+        <LinearLayout
+            android:id="@+id/game_user_deskLayout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_above="@+id/game_button_layout"
+            android:layout_toEndOf="@+id/game_system1_tip"
+            android:layout_toLeftOf="@+id/game_system2_tip"
+            android:layout_toRightOf="@+id/game_system1_tip"
+            android:layout_toStartOf="@+id/game_system2_tip"
+            android:gravity="center_horizontal|bottom"
+            android:orientation="horizontal" />
+
+        <LinearLayout
+            android:id="@+id/game_user_cardLayout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/game_button_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_above="@+id/game_user_cardLayout"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/game_button_cancel"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:background="@drawable/game_button_notgrab"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/game_button_commit"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:background="@drawable/game_button_grab"
+                tools:ignore="ButtonStyle" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</LinearLayout>
